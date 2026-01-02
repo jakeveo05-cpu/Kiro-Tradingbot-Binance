@@ -6,12 +6,21 @@ Repo này là skeleton `user_data/` + config mẫu để chạy Freqtrade trên 
 
 Làm theo upstream docs (khuyến nghị): `https://github.com/freqtrade/freqtrade` → `docs/installation.md`.
 
-Nếu bạn dùng venv ngay trong repo này, chạy CLI bằng: `.venv/bin/freqtrade` (thay vì `freqtrade`).
+Hoặc cài nhanh bằng venv (đúng với WSL/Linux):
+
+```bash
+cd /home/tuan/projects/Kiro-tradingbot-Binance/freqtrade-binance-spot
+python3 -m venv .venv
+.venv/bin/python -m pip install -U pip
+.venv/bin/pip install "freqtrade==2025.12"
+```
+
+Chạy CLI bằng: `.venv/bin/freqtrade` (thay vì `freqtrade`).
 
 ## 2) Tạo config thật (paper)
 
 ```bash
-cd /home/tuan/projects/freqtrade-binance-spot
+cd /home/tuan/projects/Kiro-tradingbot-Binance/freqtrade-binance-spot
 cp config.paper.example.json config.json
 # paper/dry-run: có thể để trống key/secret
 ```
