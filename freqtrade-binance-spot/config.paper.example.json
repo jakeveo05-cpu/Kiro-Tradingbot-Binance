@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "trading_mode": "spot",
+  "margin_mode": "",
+
+  "max_open_trades": 3,
+  "stake_currency": "USDT",
+  "stake_amount": 30,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "USD",
+
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+
+  "timeframe": "2h",
+  "cancel_open_orders_on_exit": false,
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+
+  "exchange": {
+    "name": "binance",
+    "key": "YOUR_BINANCE_API_KEY",
+    "secret": "YOUR_BINANCE_API_SECRET",
+    "enable_ws": false,
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "BTC/USDT",
+      "ZEC/USDT",
+      "SOL/USDT",
+      "BNB/USDT",
+      "XRP/USDT",
+      "ETH/USDT",
+      "POL/USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [{ "method": "StaticPairList" }],
+
+  "telegram": {
+    "enabled": false,
+    "token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "jwt_secret_key": "CHANGE_ME",
+    "CORS_origins": [],
+    "username": "freqtrader",
+    "password": "CHANGE_ME"
+  },
+
+  "bot_name": "freqtrade",
+  "db_url": "sqlite:///user_data/tradesv3.sqlite",
+  "initial_state": "running",
+  "force_entry_enable": false,
+  "internals": { "process_throttle_secs": 5 },
+
+  "strategy": "BinanceSpotEmaRsiWithHTFStrategy",
+  "strategy_path": "user_data/strategies/",
+  "recursive_strategy_search": false
+}

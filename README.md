@@ -12,6 +12,7 @@ Trading bot tự động sử dụng AI miễn phí (Gemini, Groq) để phân t
 ## 📁 Cấu trúc
 
 ```
+├── freqtrade-binance-spot/  # Freqtrade skeleton (paper → live) cho Binance spot
 ├── src/
 │   ├── main.py           # Entry point
 │   ├── trading_bot.py    # Core trading logic
@@ -64,6 +65,13 @@ GROQ_API_KEY=your_key
 cd src
 python main.py
 ```
+
+## ✅ Freqtrade (khuyến nghị cho paper → live)
+
+Nếu bạn muốn trade thuật toán theo kiểu **paper → live** ổn định hơn, dùng Freqtrade skeleton trong `freqtrade-binance-spot/`:
+
+- Xem hướng dẫn: `freqtrade-binance-spot/README.md`
+- Strategy mặc định: swing `2h` + filter `4h` (Binance spot)
 
 ## ⚠️ Lưu ý
 
