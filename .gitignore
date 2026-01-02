@@ -32,3 +32,6 @@ Thumbs.db
 # Project specific
 data/
 backtest_results/
+
+# Tooling
+.vibekit/
