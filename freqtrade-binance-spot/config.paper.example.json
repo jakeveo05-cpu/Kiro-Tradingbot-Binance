@@ -79,7 +79,7 @@
   "force_entry_enable": false,
   "internals": { "process_throttle_secs": 5 },
 
-  "strategy": "BinanceSpotEmaRsiWithHTFStrategy",
+  "strategy": "BinanceSpotBbRsiDipStrategy",
   "strategy_path": "user_data/strategies/",
   "recursive_strategy_search": false
 }

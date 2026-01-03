@@ -26,8 +26,9 @@ cp config.paper.example.json config.json
 ```
 
 Strategy options:
-- `BinanceSpotEmaRsiWithHTFStrategy`: entry/exit 2h + filter xu hướng 4h (mặc định trong config mẫu).
-- `BinanceSpotEmaRsiStrategy`: entry/exit 2h, không filter 4h (ít phụ thuộc data hơn).
+- `BinanceSpotBbRsiDipStrategy` (khuyến nghị): buy dip (BB + RSI) trong uptrend EMA, filter 4h.
+- `BinanceSpotEmaRsiWithHTFStrategy`: EMA+RSI cross 2h + filter xu hướng 4h.
+- `BinanceSpotEmaRsiStrategy`: EMA+RSI 2h, không filter 4h (ít phụ thuộc data hơn).
 
 ## 3) Download data + backtest
 
