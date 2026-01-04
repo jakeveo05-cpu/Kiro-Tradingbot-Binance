@@ -25,6 +25,21 @@ class BinanceSpotBbRsiDipStrategy(IStrategy):
     informative_timeframe = "4h"
     use_higher_timeframe_filter = True
 
+    plot_config = {
+        "main_plot": {
+            "ema_fast": {"color": "orange"},
+            "ema_slow": {"color": "blue"},
+            "bb_upper": {"color": "green"},
+            "bb_mid": {"color": "grey"},
+            "bb_lower": {"color": "red"},
+        },
+        "subplots": {
+            "RSI": {
+                "rsi": {"color": "purple"},
+            },
+        },
+    }
+
     minimal_roi = {
         "1440": 0.0,
         "720": 0.01,
@@ -128,4 +143,3 @@ class BinanceSpotBbRsiDipStrategy(IStrategy):
             "exit_long",
         ] = 1
         return dataframe
-
